@@ -1,0 +1,39 @@
+variabel:
+	hargaItem (int)
+	kodeItem (int)
+	jumlahItem(int)
+	stokItem(int)
+	totalHarga(int)
+	jumlahUang(int)
+
+prosedure tampilItem():
+	print:
+		1. item 1
+		2. item 2
+		3. dst..
+end prosedure
+
+prosedure checkout():
+	(proses checkout)
+	print: "pembayaran berhasil"
+end prosedure
+
+main:
+
+	call tampilItem()
+
+	input: kodeItem, jumlahItem
+	if jumlahItem <= stokItem:
+        totalHarga = hargaItem * jumlahItem
+        
+		input: jumlahUang
+		if jumlahUang >= totalHarga:
+			call checkout()
+		else:
+			print "uang tidak cukup"
+	else:
+		print "out of stock"
+		call tampilItem()
+			
+		
+	
